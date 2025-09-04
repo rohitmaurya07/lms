@@ -5,6 +5,8 @@ import { generateToken } from "../utils/generateToken.js";
 export const register = async(req,res)=>{
     try {
         const {name,email,pass} = req.body;
+        console.log(name,email,pass);
+        
         if (!name || !email || !pass) {
             return res.status(400).json({success: false,message: "All fields are required"})
         }
@@ -62,7 +64,7 @@ export const login = async (req,res)=>{
         console.log(error)
         return res.status(500).json({
             success: false,
-            message: "Failed to register"
+            message: "Failed to Login"
         })
     }
 }
