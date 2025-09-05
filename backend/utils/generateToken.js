@@ -9,5 +9,3 @@ export const generateToken = (res, user, message) => {
         user
     })
 }
-
-// hello thus
